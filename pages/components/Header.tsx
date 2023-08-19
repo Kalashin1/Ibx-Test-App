@@ -4,17 +4,23 @@ import Icon from 'react-native-vector-icons/EvilIcons';
 
 type HeaderProps = {
   headerText?: string;
+  showHeader?: boolean;
 };
 
-const Header: React.FC<HeaderProps> = ({headerText = 'Header'}) => {
+const Header: React.FC<HeaderProps> = ({
+  headerText = 'Header',
+  showHeader = true
+}) => {
   return (
     <View style={styles.container}>
       <View>
         <Icon name="chevron-left" color="#000" size={30} />
       </View>
-      <View style={styles.textContainer}>
-        <Text style={styles.text}>{headerText}</Text>
-      </View>
+      { showHeader && (
+        <View style={styles.textContainer}>
+          <Text style={styles.text}>{headerText}</Text>
+        </View>
+      )}
     </View>
   );
 };

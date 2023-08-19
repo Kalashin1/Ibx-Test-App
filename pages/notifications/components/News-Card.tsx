@@ -27,7 +27,7 @@ const NewsCard: React.FC<NewsCard> = ({
       <Text>{description}...</Text>
       <Text>Read More</Text>
       </View>
-      <Text>{author}</Text>
+      <Text>Published By {author}</Text>
     </View>
   );
 };
