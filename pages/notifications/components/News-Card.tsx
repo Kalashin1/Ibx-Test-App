@@ -1,5 +1,6 @@
 import React from 'react';
 import {View, Text, Image} from 'react-native';
+import styles from '../styles';
 
 type NewsCardProps = {
   image: string;
@@ -17,17 +18,21 @@ const NewsCard: React.FC<NewsCard> = ({
   author,
 }) => {
   return (
-    <View>
-      <Image 
+    <View style={styles.newsCardContainer}>
+      <Image
+        style={styles.image}
         source={image}
       />
-      <Text>{date}</Text>
-      <Text>{title}</Text>
-      <View>
-      <Text>{description}...</Text>
-      <Text>Read More</Text>
+      <Text style={styles.date}>{date}</Text>
+      <Text style={styles.title}>{title}</Text>
+      <View style={styles.descriptionContainer}>
+        <Text style={styles.description}>
+          {description}
+          ...<Text style={styles.link}>Read More</Text>
+          </Text>
+        
       </View>
-      <Text>Published By {author}</Text>
+      <Text style={styles.author}>Published By {author}</Text>
     </View>
   );
 };

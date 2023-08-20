@@ -7,7 +7,7 @@ import {
 } from 'react-native';
 import Header from './components/Header';
 import NewsCard from './components/News-Card'
-
+import styles from './styles';
 const data = [
   {
     image: require('../../assets/images/christian-buehner-Irh2teUibVE-unsplash.jpg'),
@@ -30,16 +30,18 @@ const Notification: React.FC = () => {
     <SafeAreaView>
       <ScrollView>
         <Header headerText="Hot Updates" />
-        {data.map((d, i) => (
-          <NewsCard
-            key={i}
-            title={d.tite}
-            date={d.date}
-            description={d.description}
-            author={d.author}
-            image={d.image}
-          />
-        ))}
+        <View style={styles.container}>
+          {data.map((d, i) => (
+            <NewsCard
+              key={i}
+              title={d.title}
+              date={d.date}
+              description={d.description}
+              author={d.author}
+              image={d.image}
+            />
+          ))}
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
