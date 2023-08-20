@@ -5,23 +5,30 @@ import Slider from './components/Slider';
 import Topics from './components/Topics';
 import Card from './components/Card';
 import BottomTab from './components/Bottom-Tab';
-import BottomModal from './components/Bottom-Modal';
+import styles from './styles';
 
 const Home: React.FC = () => {
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{backgroundColor: '#fff'}}>
       <ScrollView>
         <View>
           <Header />
-          <Slider />
+           <Slider /> 
         </View>
         <View>
-          <Topics />
-          <Card />
+          <View style={styles.topicContainer}>
+            <Topics />
+          </View>
+          <View>
+          {
+            [0, 1, 3].map((v, i) => (
+              <Card key={i} />
+            ))
+          }
+          </View>
         </View>
-        <BottomTab />
-        <BottomModal />
       </ScrollView>
+      <BottomTab />
     </SafeAreaView>
   );
 };

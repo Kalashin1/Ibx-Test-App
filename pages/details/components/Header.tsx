@@ -11,11 +11,11 @@ const Header: React.FC<HeaderProps> = ({ coverImage }) => {
   return (
     <View style={styles.headerContainer}>
       <View>
-        <TouchableOpacity>
           <View style={styles.backButton}>
+            <TouchableOpacity>
               <Icon name="chevron-left" color="#000" size={30} />
+            </TouchableOpacity>
           </View>
-        </TouchableOpacity>
         <View style={styles.imageContainer}>
           <Image style={styles.image} source={coverImage} />
         </View>

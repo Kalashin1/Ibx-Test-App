@@ -1,6 +1,7 @@
 import React from 'react';
 import {View, StyleSheet, TextInput} from 'react-native';
 import Icon from 'react-native-vector-icons/EvilIcons';
+import styles from '../styles';
 
 
 const Header: React.FC = () => {
@@ -8,21 +9,20 @@ const Header: React.FC = () => {
 
 
   return (
-    <View>
-      <View>
+    <View style={styles.headerContainer}>
+      <View style={styles.inputContainer}>
         <TextInput
+          style={styles.input}
           value={searchTerm}
           onChange={updateSearchTerm}
-          placeholder="useless placeholder"
+          placeholder="Dodgecoin to the moon"
         />
+      <View style={styles.searchIconContainer}>
+        <Icon name="search" color="#000" size={30} />
       </View>
-      <View>
-        <Icon name="chevron-left" color="#000" size={10} />
+      <View style={styles.notificationIconContainer}>
+        <Icon name="bell" color="#fff" size={30} />
       </View>
-      <View>
-        <View>
-          <Icon name="bell" color="#000" size={10} />
-        </View>
       </View>
     </View>
   );
