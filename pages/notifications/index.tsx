@@ -25,7 +25,9 @@ const data = [
   }
 ]
 
-const Notification: React.FC = () => {
+const Notification: React.FC = ({
+  
+}) => {
   return (
     <SafeAreaView>
       <ScrollView>

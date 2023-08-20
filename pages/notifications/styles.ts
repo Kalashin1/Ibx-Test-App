@@ -1,6 +1,22 @@
 import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
+  headerContainer: {
+    paddingHorizontal: 10,
+    paddingVertical: 20,
+    marginBottom: 10,
+    display: 'flex',
+    flexDirection: 'row',
+  },
+  headerTextContainer: {
+    width: '80%'
+  },
+  headerText: {
+    textAlign: 'center',
+    color: 'rgba(255, 58, 68, 1)rgba(255, 128, 134, 1)',
+    fontSize: 17,
+    fontFamily: 'SFPRODISPLAYMEDIUM'
+  },
 	container: {
 		paddingHorizontal: 15
 	},

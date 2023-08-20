@@ -1,22 +1,28 @@
 import React from 'react';
-import {View, Text} from 'react-native';
-import Icon from 'react-native-vector-icons/EvilIcons';
+import {View, Text, ScrollView} from 'react-native';
+import styles from '../styles';
+import FAB from './FAB';
 
 type NewsText = {
   content: string;
-}
+  date: string;
+  title: string;
+  author: string;
+};
 
-const NewsText: React.FC<NewsText> = ({
-  content
-}) => {
+const NewsText: React.FC<NewsText> = ({content, date, title, author}) => {
   return (
     <View>
-      <Text>
-        {content}
-      </Text>
-      <View>
-        <Icon name="heart" size={25} color="red" />
-        <Icon name="heart" size={15} color="blue" />
+      <View style={styles.card}>
+        <Text style={styles.date}>{date}</Text>
+        <Text style={styles.title}>{title}</Text>
+        <Text style={styles.author}>Published by {author}</Text>
+      </View>
+      <View style={styles.newsTextContainer}>
+        <ScrollView>
+          <Text>{content}</Text>
+        </ScrollView>
+        <FAB />
       </View>
     </View>
   );

@@ -1,38 +1,24 @@
-import React from 'react'
-import {View, Image, Text} from 'react-native'
+import React from 'react';
+import {View, Image, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/EvilIcons';
+import styles from '../styles';
 
 type HeaderProps = {
   coverImage: any;
-  date: string;
-  title: string;
-  author: string;
-} 
+};
 
-const Header: React.FC<HeaderProps> = ({
-  coverImage,
-  date,
-  title,
-  author,
-}) => {
+const Header: React.FC<HeaderProps> = ({ coverImage }) => {
   return (
-    <View>
+    <View style={styles.headerContainer}>
       <View>
-        <Icon name="chevron-left" color="#000" size={30} />
-      </View>
-      <View>
-        <Image
-          source={coverImage} 
-        />
-      </View>
-      <View>
-        <Text>{date}</Text>
-        <Text>
-          {title}
-        </Text>
-        <Text>
-          Published by {author}
-        </Text>
+        <TouchableOpacity>
+          <View style={styles.backButton}>
+              <Icon name="chevron-left" color="#000" size={30} />
+          </View>
+        </TouchableOpacity>
+        <View style={styles.imageContainer}>
+          <Image style={styles.image} source={coverImage} />
+        </View>
       </View>
     </View>
   );

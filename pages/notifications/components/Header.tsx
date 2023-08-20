@@ -1,6 +1,7 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/EvilIcons';
+import styles from '../styles'
 
 type HeaderProps = {
   headerText?: string;
@@ -12,36 +13,20 @@ const Header: React.FC<HeaderProps> = ({
   showHeader = true
 }) => {
   return (
-    <View style={styles.container}>
+    <View style={styles.headerContainer}>
       <View>
-        <Icon name="chevron-left" color="#000" size={30} />
+        <TouchableOpacity>
+          <Icon name="chevron-left" color="#000" size={30} />
+        </TouchableOpacity>
       </View>
       { showHeader && (
-        <View style={styles.textContainer}>
-          <Text style={styles.text}>{headerText}</Text>
+        <View style={styles.headerTextContainer}>
+          <Text style={styles.headerText}>{headerText}</Text>
         </View>
       )}
     </View>
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    paddingHorizontal: 10,
-    paddingVertical: 20,
-    marginBottom: 10,
-    display: 'flex',
-    flexDirection: 'row',
-  },
-  textContainer: {
-    width: '80%'
-  },
-  text: {
-    textAlign: 'center',
-    color: 'rgba(255, 58, 68, 1)rgba(255, 128, 134, 1)',
-    fontSize: 17,
-    fontFamily: 'SFPRODISPLAYMEDIUM'
-  },
-});
 
 export default Header;
