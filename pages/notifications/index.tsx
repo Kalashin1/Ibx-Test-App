@@ -5,7 +5,7 @@ import {
   Text,
   View
 } from 'react-native';
-import {Header} from '../components';
+import Header from './components/Header';
 import NewsCard from './components/News-Card'
 
 const data = [
@@ -30,8 +30,9 @@ const Notification: React.FC = () => {
     <SafeAreaView>
       <ScrollView>
         <Header headerText="Hot Updates" />
-        {data.map((d) => (
-          <NewsCard 
+        {data.map((d, i) => (
+          <NewsCard
+            key={i}
             title={d.tite}
             date={d.date}
             description={d.description}
