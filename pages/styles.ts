@@ -2,7 +2,7 @@ import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   headerContainer: {
-    paddingHorizontal: 15
+    paddingHorizontal: 15,
   },
   inputContainer: {
     display: 'flex',
@@ -86,12 +86,12 @@ const styles = StyleSheet.create({
     fontSize: 10,
     fontWeight: '400',
     marginTop: 38,
-    paddingRight: 20 
+    paddingRight: 20,
   },
   topicContainer: {
     // flexDirection: 'row',
     marginTop: 24,
-    paddingHorizontal: 16, 
+    paddingHorizontal: 16,
     marginBottom: 16,
     // borderWidth: 2,
   },
@@ -150,19 +150,26 @@ const styles = StyleSheet.create({
     color: '#FFF',
     fontSize: 12,
     fontWeight: '600',
-    lineHeight: 20.8
+    lineHeight: 20.8,
+  },
+  cardTextDate: {
+    color: '#FFF',
+    fontSize: 12,
+    fontWeight: '600',
+    lineHeight: 20.8,
+    marginRight: 16,
   },
   footerContainer: {
     marginHorizontal: 43,
     backgroundColor: '#fff',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    shadowColor: "#000000",
+    shadowColor: '#0000',
     shadowOffset: {
       width: 0,
       height: 3,
     },
-    shadowOpacity:  0.17,
+    shadowOpacity: 0.17,
     shadowRadius: 3.05,
     elevation: 4,
     position: 'relative',
@@ -174,7 +181,7 @@ const styles = StyleSheet.create({
   },
   footerNavItem: {
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
 });
 

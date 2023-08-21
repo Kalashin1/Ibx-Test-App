@@ -2,7 +2,7 @@ import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   headerContainer: {
-    paddingHorizontal: 15
+    paddingHorizontal: 15,
   },
   inputContainer: {
     display: 'flex',
@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
   topicContainer: {
     // flexDirection: 'row',
     marginTop: 24,
-    paddingHorizontal: 16, 
+    paddingHorizontal: 16,
     marginBottom: 16,
     // borderWidth: 2,
   },
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     fontSize: 12,
   },
   activeTopic: {
-    backgroundColor: 'rgba(255, 58, 68, 1)'
+    backgroundColor: 'rgba(255, 58, 68, 1)',
   },
   activeTopicText: {
     color: '#fff',
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
   },
   flex: {
     flexDirection: 'row',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   spaceBetween: {
     justifyContent: 'space-evenly',
@@ -67,21 +67,26 @@ const styles = StyleSheet.create({
   },
   heading: {
     fontSize: 16,
-    fontWeight: '700'
+    fontWeight: '700',
   },
   headingItalics: {
     paddingLeft: 4,
     fontStyle: 'italic',
-    fontWeight: '700'
+    fontWeight: '700',
   },
   bottomModalContainer: {
-    position: 'relative',
-    top: -420,
-    backgroundColor: "#fff",
+    backgroundColor: '#fff',
     paddingHorizontal: 15,
     borderTopLeftRadius: 24,
     borderTopRightRadius: 24,
     paddingVertical: 33,
+    position: 'relative',
+    top: 320,
+  },
+  bottomModalBackDrop: {
+    backgroundColor: 'rgba(0,0,0,0.3)',
+    position: 'relative',
+    top: -752,
   },
   bottomModalHeader: {
     flexDirection: 'row',
@@ -99,7 +104,7 @@ const styles = StyleSheet.create({
     width: 100,
     paddingVertical: 8,
     borderRadius: 16,
-    borderWidth: 1
+    borderWidth: 1,
   },
   sortBy: {
     fontWeight: '600',
@@ -113,7 +118,7 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
   },
   margin: {
-    margin: 5
+    margin: 5,
   },
   saveButton: {
     width: '100%',
@@ -126,14 +131,14 @@ const styles = StyleSheet.create({
     borderRadius: 24,
   },
   saveButtonText: {
-    color: '#fff'
+    color: '#fff',
   },
   closeButtonContainer: {
     width: '100%',
     justifyContent: 'center',
     alignItems: 'center',
     marginBottom: 19,
-    borderRadius:10,
+    borderRadius: 10,
     position: 'relative',
     top: -10,
   },
@@ -141,7 +146,7 @@ const styles = StyleSheet.create({
     width: 72,
     height: 5,
     backgroundColor: '#C5C5C5',
-  }
-})
+  },
+});
 
 export default styles;

@@ -3,29 +3,25 @@ import {View, Text, Image} from 'react-native';
 import styles from '../styles';
 
 const Topics: React.FC = () => {
-	return (
-	  <View style={styles.cardsContainer}>
+  return (
+    <View style={styles.cardsContainer}>
       <View>
-  	    <Image
+        <Image
           style={styles.cardsImage}
-  	    	source={require('../../assets/images/christian-buehner-Irh2teUibVE-unsplash.jpg')}
-  	    />	
-	    </View>
-	    <View style={styles.cardTextContainer}>
-	    	<Text style={styles.cardTextTitle}>
-	    		5 things to know about the 'conundrum' of lupus
-	    	</Text>
+          source={require('../../assets/images/christian-buehner-Irh2teUibVE-unsplash.jpg')}
+        />
+      </View>
+      <View style={styles.cardTextContainer}>
+        <Text style={styles.cardTextTitle}>
+          5 things to know about the 'conundrum' of lupus
+        </Text>
         <View style={styles.cardTextFooter}>
-  	    	<Text style={styles.cardTextAuthor}>
-  	    		Matt Villano
-  	    	</Text>
-  	    	<Text style={styles.cardTextAuthor}>
-  	    		Sunday, 9 May 2021
-  	    	</Text>
+          <Text style={styles.cardTextAuthor}>Matt Villano</Text>
+          <Text style={styles.cardTextDate}>Sunday, 9 May 2021</Text>
         </View>
-	    </View>
-	  </View>
-	);
+      </View>
+    </View>
+  );
 };
 
 export default Topics;
