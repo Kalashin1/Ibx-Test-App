@@ -1,7 +1,8 @@
 import React from 'react';
-import {SafeAreaView, View} from 'react-native';
+import {SafeAreaView, View, Text} from 'react-native';
 import Header from './components/Header';
 import NewsText from './components/News-Text';
+import FAB from './components/FAB'
 import {RootStackParamList, SCREEN_NAMES} from '../../navigation/constants';
 import type {NativeStackScreenProps} from '@react-navigation/native-stack';
 
@@ -12,8 +13,12 @@ export type DetailsProps = NativeStackScreenProps<
 
 const Details = ({navigation, route}: DetailsProps) => {
   const data = route.params;
+  console.log(data)
   return (
     <SafeAreaView>
+      <View>
+        <Text>Hello</Text>
+      </View>
       <Header navigation={navigation} coverImage={data.urlToImage} />
       <View>
         <NewsText
@@ -23,6 +28,7 @@ const Details = ({navigation, route}: DetailsProps) => {
           author={data.author}
         />
       </View>
+      <FAB />
     </SafeAreaView>
   );
 };

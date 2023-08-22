@@ -8,29 +8,25 @@ type NewsCardProps = {
   title: string;
   description: string;
   author: string;
-}
+};
 
-const NewsCard: React.FC<NewsCard> = ({
+const NewsCard: React.FC<NewsCardProps> = ({
   image,
-  date,
+  date, 
   title,
   description,
   author,
 }) => {
   return (
     <View style={styles.newsCardContainer}>
-      <Image
-        style={styles.image}
-        source={image}
-      />
+      <Image style={styles.image} source={{uri: image}} />
       <Text style={styles.date}>{date}</Text>
       <Text style={styles.title}>{title}</Text>
       <View style={styles.descriptionContainer}>
         <Text style={styles.description}>
           {description}
           ...<Text style={styles.link}>Read More</Text>
-          </Text>
-        
+        </Text>
       </View>
       <Text style={styles.author}>Published By {author}</Text>
     </View>

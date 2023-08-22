@@ -19,7 +19,7 @@ const Header: React.FC<HeaderProps> = ({coverImage, navigation}) => {
           </View>
         </TouchableOpacity>
         <View style={styles.imageContainer}>
-          <Image style={styles.image} source={coverImage} />
+          <Image style={styles.image} source={{uri: coverImage}} />
         </View>
       </View>
     </View>
