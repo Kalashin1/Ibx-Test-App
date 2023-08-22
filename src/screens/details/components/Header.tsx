@@ -10,6 +10,12 @@ type HeaderProps = {
 };
 
 const Header: React.FC<HeaderProps> = ({coverImage, navigation}) => {
+  const [image, updateCoverImage] = React.useState('');
+  React.useEffect(() => {
+    updateCoverImage(coverImage);
+  }, [coverImage]);
+
+  console.log(coverImage);
   return (
     <View style={styles.headerContainer}>
       <View>
@@ -19,7 +25,7 @@ const Header: React.FC<HeaderProps> = ({coverImage, navigation}) => {
           </View>
         </TouchableOpacity>
         <View style={styles.imageContainer}>
-          <Image style={styles.image} source={{uri: coverImage}} />
+          {image && <Image style={styles.image} source={{uri: image}} />}
         </View>
       </View>
     </View>

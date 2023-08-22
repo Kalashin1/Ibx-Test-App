@@ -4,11 +4,15 @@ import {
   TextInput,
   NativeSyntheticEvent,
   TextInputChangeEventData,
+  TouchableOpacity,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import styles from '../styles';
+import {SearchProps} from '..';
 
-const Header: React.FC = () => {
+const Header: React.FC<{
+  navigation: SearchProps['navigation'];
+}> = ({navigation}) => {
   const [searchTerm, updateSearchTerm] = React.useState<
     NativeSyntheticEvent<TextInputChangeEventData> | string
   >('');
@@ -22,9 +26,11 @@ const Header: React.FC = () => {
           onChange={updateSearchTerm}
           placeholder="Dodgecoin to the moon"
         />
-        <View style={styles.searchIconContainer}>
-          <Icon name="times" color="#000" size={30} />
-        </View>
+        <TouchableOpacity onPress={navigation.goBack}>
+          <View style={styles.searchIconContainer}>
+            <Icon name="times" color="#000" size={30} />
+          </View>
+        </TouchableOpacity>
       </View>
     </View>
   );

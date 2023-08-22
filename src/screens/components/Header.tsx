@@ -9,6 +9,7 @@ import {
 import Icon from 'react-native-vector-icons/EvilIcons';
 import styles from '../styles';
 import {HomeProps} from '../';
+import {SCREEN_NAMES} from '../../navigation/constants';
 
 const Header: React.FC<{
   navigation: HomeProps['navigation'];
@@ -16,6 +17,12 @@ const Header: React.FC<{
   const [searchTerm, updateSearchTerm] = React.useState<
     NativeSyntheticEvent<TextInputChangeEventData> | string
   >('');
+
+  const gotoSearch = () => {
+    navigation.push(SCREEN_NAMES.SEARCH, {
+      searchTerm: searchTerm as string,
+    });
+  };
 
   return (
     <View style={styles.headerContainer}>
@@ -27,12 +34,13 @@ const Header: React.FC<{
           placeholder="Dodgecoin to the moon"
         />
         <View style={styles.searchIconContainer}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={gotoSearch}>
             <Icon name="search" color="#000" size={30} />
           </TouchableOpacity>
         </View>
 
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => navigation.navigate(SCREEN_NAMES.NOTIFICATIONS)}>
           <View style={styles.notificationIconContainer}>
             <Icon name="bell" color="#fff" size={30} />
           </View>

@@ -1,48 +1,45 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  Text,
-  View
-} from 'react-native';
+import {SafeAreaView, ScrollView, TouchableOpacity, View} from 'react-native';
 import Header from './components/Header';
-import NewsCard from './components/News-Card'
+import NewsCard from './components/News-Card';
 import styles from './styles';
-const data = [
-  {
-    image: require('../../../assets/images/Frame 32 (1).png'),
-    date: 'Monday, 10 May 2021',
-    title: 'WHO classifies triple-mutant Covid variant from India as global health risk',
-    description: 'A World Health Organization official said Monday it is reclassifying the highly contagious triple-mutant Covid variant spreading in India as a “variant of concern,” indicating that it’s become a',
-    author: 'Berkeley Lovelace Jr.',
-  },
-  {
-    image: require('../../../assets/images/christian-buehner-Irh2teUibVE-unsplash.jpg'),
-    date: 'Monday, 10 May 2021',
-    title: 'WHO classifies triple-mutant Covid variant from India as global health risk',
-    description: 'A World Health Organization official said Monday it is reclassifying the highly contagious triple-mutant Covid variant spreading in India as a “variant of concern,” indicating that it’s become a',
-    author: 'Berkeley Lovelace Jr.'
-  }
-]
+import {RootStackParamList, SCREEN_NAMES} from '../../navigation/constants';
+import type {NativeStackScreenProps} from '@react-navigation/native-stack';
+import {newsApi, News} from '../../store/services';
 
-const Notification: React.FC = ({
-  
-}) => {
+export type NotificationProps = NativeStackScreenProps<
+  RootStackParamList,
+  SCREEN_NAMES.NOTIFICATIONS
+>;
+
+const Notification = ({navigation}: NotificationProps) => {
+  const {data, isLoading} = newsApi.useGetAllNewsQuery('bitcoin');
+  const [news, setNews] = React.useState<News[]>();
+
+  React.useEffect(() => {
+    if (!isLoading) {
+      setNews(data?.articles);
+    }
+  }, [data?.articles, isLoading]);
+
+  const gotoDetail = (d: News) => navigation.navigate(SCREEN_NAMES.DETAIL, d);
   return (
     <SafeAreaView>
       <ScrollView>
-        <Header headerText="Hot Updates" />
+        <Header navigation={navigation} headerText="Hot Updates" />
         <View style={styles.container}>
-          {data.map((d, i) => (
-            <NewsCard
-              key={i}
-              title={d.title}
-              date={d.date}
-              description={d.description}
-              author={d.author}
-              image={d.image}
-            />
-          ))}
+          {news &&
+            news?.map((d, i) => (
+              <TouchableOpacity key={i} onPress={() => gotoDetail(d)}>
+                <NewsCard
+                  title={d.title}
+                  date={d.publishedAt}
+                  description={d.description}
+                  author={d.author}
+                  image={d.urlToImage}
+                />
+              </TouchableOpacity>
+            ))}
         </View>
       </ScrollView>
     </SafeAreaView>

@@ -28,7 +28,7 @@ const Home = ({navigation}: HomeProps) => {
     <SafeAreaView style={styles.rootComponent}>
       <ScrollView>
         <View>
-          <Header />
+          <Header navigation={navigation} />
           {news && <Slider navigation={navigation} news={news} />}
         </View>
         <View>

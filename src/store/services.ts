@@ -21,7 +21,7 @@ export const newsApi = createApi({
   endpoints: builder => ({
     getAllNews: builder.query<response, string>({
       query: (topic: string) =>
-        `everything?q=${topic}&pageSize=3&apiKey=${process.env.NEWS_API_KEY}`,
+        `everything?q=${topic}&pageSize=6&apiKey=${process.env.NEWS_API_KEY}`,
     }),
   }),
 });

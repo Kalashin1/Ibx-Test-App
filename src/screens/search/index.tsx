@@ -6,8 +6,15 @@ import styles from './styles';
 import Card from '../components/Card';
 import BottomModal from './components/Bottom-Modal';
 import {newsApi, News} from '../../store/services';
+import {RootStackParamList, SCREEN_NAMES} from '../../navigation/constants';
+import type {NativeStackScreenProps} from '@react-navigation/native-stack';
 
-const Search: React.FC = () => {
+export type SearchProps = NativeStackScreenProps<
+  RootStackParamList,
+  SCREEN_NAMES.SEARCH
+>;
+
+const Search = ({navigation}: SearchProps) => {
   const [showModal, updateShowModal] = React.useState(true);
   const {data, isLoading} = newsApi.useGetAllNewsQuery('bitcoin');
   const [news, setNews] = React.useState<News[]>();
@@ -22,7 +29,7 @@ const Search: React.FC = () => {
     <SafeAreaView style={{backgroundColor: '#fff'}}>
       <ScrollView>
         <View>
-          <Header />
+          <Header navigation={navigation} />
         </View>
         <Filters openModal={updateShowModal} />
         <View style={styles.headingContainer}>
