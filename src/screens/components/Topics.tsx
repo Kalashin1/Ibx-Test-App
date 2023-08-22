@@ -24,7 +24,7 @@ const Topics: React.FC = () => {
         visibleItems={3}
         mode='parallax'
         modeConfig={{parallaxScrollingOffset: 260,  parallaxAdjacentItemScale: .8}}
-        autoPlay={false}
+        autoPlay={true}
         data={topics}
         scrollAnimationDuration={500}
         renderItem={({index, item}) => (

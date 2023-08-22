@@ -79,6 +79,7 @@ const styles = StyleSheet.create({
     color: '#FFF',
     fontSize: 16,
     fontWeight: '700',
+    fontFamily: 'New York',
     marginTop: 8,
     paddingRight: 10,
   },
@@ -88,6 +89,7 @@ const styles = StyleSheet.create({
     fontWeight: '400',
     marginTop: 38,
     paddingRight: 20,
+    fontFamily: 'Nunito',
   },
   topicContainer: {
     marginTop: 24,
@@ -107,6 +109,7 @@ const styles = StyleSheet.create({
   topicText: {
     color: '#000',
     fontWeight: '600',
+    fontFamily: 'Nunito',
     fontSize: 12,
   },
   activeTopic: {
@@ -115,6 +118,7 @@ const styles = StyleSheet.create({
   activeTopicText: {
     color: '#fff',
     fontWeight: '600',
+    fontFamily: 'Nunito',
     fontSize: 12,
   },
   cardsContainer: {
@@ -150,6 +154,7 @@ const styles = StyleSheet.create({
     fontSize: 12,
     fontWeight: '600',
     lineHeight: 20.8,
+    fontFamily: 'Nunito',
   },
   cardTextDate: {
     color: '#FFF',

@@ -22,6 +22,7 @@ const SliderInner = ({
       width={width}
       height={width / 1.5}
       mode="parallax"
+      autoPlay={true}
       modeConfig={{parallaxScrollingOffset: 20, parallaxAdjacentItemScale: 0.8}}
       data={data}
       scrollAnimationDuration={500}
