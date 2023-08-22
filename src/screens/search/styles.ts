@@ -24,11 +24,9 @@ const styles = StyleSheet.create({
     left: -38,
   },
   topicContainer: {
-    // flexDirection: 'row',
     marginTop: 24,
     paddingHorizontal: 16,
     marginBottom: 16,
-    // borderWidth: 2,
   },
   topic: {
     paddingHorizontal: 16,
@@ -44,6 +42,7 @@ const styles = StyleSheet.create({
     color: '#000',
     fontWeight: '600',
     fontSize: 12,
+    fontFamily: 'Nunito',
   },
   activeTopic: {
     backgroundColor: 'rgba(255, 58, 68, 1)',
@@ -52,6 +51,7 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontWeight: '600',
     fontSize: 12,
+    fontFamily: 'Nunito',
   },
   flex: {
     flexDirection: 'row',
@@ -68,6 +68,7 @@ const styles = StyleSheet.create({
   heading: {
     fontSize: 16,
     fontWeight: '700',
+    fontFamily: 'Nunito',
   },
   headingItalics: {
     paddingLeft: 4,
@@ -96,6 +97,7 @@ const styles = StyleSheet.create({
   bottomModalHeading: {
     fontSize: 22,
     fontWeight: '700',
+    fontFamily: 'Nunito',
   },
   bottomModalResetButton: {
     flexDirection: 'row',
@@ -112,6 +114,7 @@ const styles = StyleSheet.create({
     marginTop: 25,
     fontSize: 14,
     marginBottom: 8,
+    fontFamily: 'Nunito',
   },
   bottomFilterContainer: {
     flexDirection: 'row',
@@ -132,6 +135,7 @@ const styles = StyleSheet.create({
   },
   saveButtonText: {
     color: '#fff',
+    fontFamily: 'Nunito',
   },
   closeButtonContainer: {
     width: '100%',
