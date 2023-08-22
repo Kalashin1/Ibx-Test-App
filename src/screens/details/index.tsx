@@ -13,7 +13,7 @@ export type DetailsProps = NativeStackScreenProps<
 
 const Details = ({navigation, route}: DetailsProps) => {
   const data = route.params;
-  console.log(data)
+  console.log(data);
   return (
     <SafeAreaView>
       <View>

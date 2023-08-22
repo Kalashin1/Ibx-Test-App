@@ -5,9 +5,19 @@ import Filters from './components/Filters';
 import styles from './styles';
 import Card from '../components/Card';
 import BottomModal from './components/Bottom-Modal';
+import {newsApi, News} from '../../store/services';
 
 const Search: React.FC = () => {
   const [showModal, updateShowModal] = React.useState(true);
+  const {data, isLoading} = newsApi.useGetAllNewsQuery('bitcoin');
+  const [news, setNews] = React.useState<News[]>();
+
+  React.useEffect(() => {
+    if (!isLoading) {
+      setNews(data?.articles);
+    }
+  }, [data?.articles, isLoading]);
+
   return (
     <SafeAreaView style={{backgroundColor: '#fff'}}>
       <ScrollView>
@@ -20,9 +30,7 @@ const Search: React.FC = () => {
           <Text style={styles.headingItalics}>COVID New Variant</Text>
         </View>
         <View style={{marginVertical: 16}}>
-          {[0, 1, 3, 4, 2].map((v, i) => (
-            <Card key={i} />
-          ))}
+          {news && news.map((v, i) => <Card key={i} {...v} />)}
         </View>
       </ScrollView>
       {showModal && <BottomModal closeModal={updateShowModal} />}
