@@ -1,4 +1,4 @@
-import {StyleSheet, width} from 'react-native';
+import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   headerContainer: {
@@ -48,14 +48,14 @@ const styles = StyleSheet.create({
   title: {
     color: '#000',
     marginVertical: 4,
-    // fontFamily: New York Small;
+    fontFamily: 'New York',
     fontSize: 16,
     fontWeight: '700',
     lineHeight: 19.2,
   },
   author: {
     color: 'rgba(46, 5, 5, 1)',
-    // font-family: Nunito;
+    fontFamily: 'Nunito',
     fontSize: 10,
     fontWeight: '800',
     lineHeight: 10,
@@ -85,6 +85,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     height: 60,
     backgroundColor: 'rgba(255, 58, 68, 1)',
+  },
+  contentText: {
+    fontWeight: '900',
+    fontFamily: 'Nunito',
+    fontSize: 14,
+    lineHeight: 21,
   },
 });
 

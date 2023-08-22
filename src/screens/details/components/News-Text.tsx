@@ -20,7 +20,7 @@ const NewsText: React.FC<NewsText> = ({content, date, title, author}) => {
       </View>
       <View style={styles.newsTextContainer}>
         <ScrollView>
-          <Text>{content}</Text>
+          <Text style={styles.contentText}>{content}</Text>
         </ScrollView>
         <FAB />
       </View>
