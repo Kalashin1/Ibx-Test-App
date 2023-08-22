@@ -9,29 +9,21 @@ type HeaderProps = {
   navigation: DetailsProps['navigation'];
 };
 
-const Header: React.FC<HeaderProps> = ({coverImage, navigation}) => {
-  const [image, updateCoverImage] = React.useState('');
-  React.useEffect(() => {
-    updateCoverImage(coverImage);
-    console.log('image');
-  }, [coverImage]);
-
+const Header: React.FC<HeaderProps> = ({navigation}) => {
   return (
     <View style={styles.headerContainer}>
       <View>
+        <View style={styles.imageContainer}>
+          <Image
+            style={styles.image}
+            source={require('../../../../assets/images/christian-buehner-Irh2teUibVE-unsplash.jpg')}
+          />
+        </View>
         <TouchableOpacity onPress={navigation.goBack}>
           <View style={styles.backButton}>
             <Icon name="chevron-left" color="#000" size={30} />
           </View>
         </TouchableOpacity>
-        <View style={styles.imageContainer}>
-          {image && (
-            <Image
-              style={styles.image}
-              source={require('../../../../assets/images/Frame 32 (1).png')}
-            />
-          )}
-        </View>
       </View>
     </View>
   );

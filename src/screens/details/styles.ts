@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, width} from 'react-native';
 
 const styles = StyleSheet.create({
   headerContainer: {
@@ -11,11 +11,13 @@ const styles = StyleSheet.create({
     width: 32,
     backgroundColor: 'rgba(245, 245, 245, 0.50)',
     height: 32,
-    elevation: 10,
-    zIndex: 10,
+    elevation: 40,
+    zIndex: 40,
     margin: 15,
     borderRadius: 10,
     display: 'flex',
+    position: 'relative',
+    right: -10,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -38,7 +40,7 @@ const styles = StyleSheet.create({
   },
   date: {
     color: '#2E0505',
-    // font-family: Nunito;
+    fontFamily: 'Nunito',
     fontSize: 12,
     fontWeight: '600',
     lineHeight: 20.8,

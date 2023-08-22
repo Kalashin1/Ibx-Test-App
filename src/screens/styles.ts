@@ -43,17 +43,17 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   sliderHeading: {
-    // font-family: New York Small;
+    fontFamily: 'New York',
     fontSize: 18,
     fontWeight: '700',
     lineHeight: 20.8,
   },
   seeAll: {
     color: '#0080FF',
-    // font-family: Nunito;
+    fontFamily: 'Nunito',
     fontSize: 12,
     fontWeight: '600',
-    marginRight: 10
+    marginRight: 10,
   },
   sliderInnerContainer: {
     marginVertical: 16,
@@ -62,16 +62,16 @@ const styles = StyleSheet.create({
     fontWeight: '800',
     position: 'relative',
     top: -160,
-    marginLeft: 16
+    marginLeft: 16,
   },
   sliderImage: {
     height: 240,
     width: '110%',
-    borderRadius: 8
+    borderRadius: 8,
   },
   sliderAuthor: {
     color: '#FFF',
-    // font-family: Nunito;
+    fontFamily: 'Nunito',
     fontSize: 10,
     fontWeight: '800',
   },
@@ -90,11 +90,9 @@ const styles = StyleSheet.create({
     paddingRight: 20,
   },
   topicContainer: {
-    // flexDirection: 'row',
     marginTop: 24,
     paddingHorizontal: 16,
     marginBottom: 16,
-    // borderWidth: 2,
   },
   topic: {
     paddingHorizontal: 16,
@@ -112,7 +110,7 @@ const styles = StyleSheet.create({
     fontSize: 12,
   },
   activeTopic: {
-    backgroundColor: 'rgba(255, 58, 68, 1)'
+    backgroundColor: 'rgba(255, 58, 68, 1)',
   },
   activeTopicText: {
     color: '#fff',
@@ -136,7 +134,7 @@ const styles = StyleSheet.create({
   },
   cardTextTitle: {
     color: '#FFF',
-    // fontFamily: New York Small;
+    fontFamily: 'New York',
     fontSize: 14,
     fontWeight: '600',
     lineHeight: 20.8,
