@@ -10,14 +10,14 @@ import NewsCard from './components/News-Card'
 import styles from './styles';
 const data = [
   {
-    image: require('../../assets/images/christian-buehner-Irh2teUibVE-unsplash.jpg'),
+    image: require('../../../assets/images/Frame 32 (1).png'),
     date: 'Monday, 10 May 2021',
     title: 'WHO classifies triple-mutant Covid variant from India as global health risk',
     description: 'A World Health Organization official said Monday it is reclassifying the highly contagious triple-mutant Covid variant spreading in India as a “variant of concern,” indicating that it’s become a',
-    author: 'Berkeley Lovelace Jr.'
+    author: 'Berkeley Lovelace Jr.',
   },
   {
-    image: require('../../assets/images/christian-buehner-Irh2teUibVE-unsplash.jpg'),
+    image: require('../../../assets/images/christian-buehner-Irh2teUibVE-unsplash.jpg'),
     date: 'Monday, 10 May 2021',
     title: 'WHO classifies triple-mutant Covid variant from India as global health risk',
     description: 'A World Health Organization official said Monday it is reclassifying the highly contagious triple-mutant Covid variant spreading in India as a “variant of concern,” indicating that it’s become a',

@@ -28,7 +28,7 @@ const Topics: React.FC = () => {
         data={topics}
         scrollAnimationDuration={500}
         renderItem={({index, item}) => (
-          <View key={index} style={[styles.topic, item.active ? styles.activeTopic : '']}>
+          <View key={index} style={[styles.topic, item.active ? styles.activeTopic : {}]}>
             <Text style={item.active ? styles.activeTopicText: styles.topicText}>{item.text}</Text>
           </View>
         )}

@@ -11,7 +11,7 @@ const data = {
   Asked at a press conference Thursday about the rising value of cryptocurrencies, Bailey said: “They have no intrinsic value. That doesn’t mean to say people don’t put value on them, because they can have extrinsic value. But they have no intrinsic value.”
 
   “I’m going to say this very bluntly again,” he added. “Buy them only if you’re prepared to lose all your money.”`,
-  coverImage: require('../../assets/images/christian-buehner-Irh2teUibVE-unsplash.jpg'),
+  coverImage: require('../../../assets/images/christian-buehner-Irh2teUibVE-unsplash.jpg'),
   date: 'Sunday, 9 May 2021',
   title:
     'Crypto investors should be prepared to lose all their money, BOE governor says',
