@@ -9,38 +9,40 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   headerTextContainer: {
-    width: '80%'
+    width: '80%',
   },
   headerText: {
     textAlign: 'center',
     color: 'rgba(255, 58, 68, 1)rgba(255, 128, 134, 1)',
     fontSize: 17,
-    fontFamily: 'SFPRODISPLAYMEDIUM'
+    fontFamily: 'SFPRODISPLAYMEDIUM',
   },
-	container: {
-		paddingHorizontal: 15
-	},
-	image: {
-		width: '100%',
-		height: 128,
+  container: {
+    paddingHorizontal: 15,
+  },
+  image: {
+    width: '100%',
+    height: 128,
     borderRadius: 10,
-	},
+  },
   newsCardContainer: {
-    marginBottom: 14
+    marginBottom: 14,
   },
   date: {
     color: '#000',
-    fontSize: 12,   
+    fontSize: 12,
+    fontFamily: 'Nunito',
     fontWeight: '300',
     lineHeight: 20,
     marginTop: 16,
-    paddingVertical: 2
+    paddingVertical: 2,
   },
   title: {
     fontSize: 14,
     fontWeight: '600',
+    fontFamily: 'New York',
     color: '#000',
-    lineHeight: 20, 
+    lineHeight: 20,
     marginBottom: 6,
   },
   descriptionContainer: {
@@ -50,25 +52,25 @@ const styles = StyleSheet.create({
   },
   description: {
     color: '#000',
-    fontFamily:  'SFPRODISPLAYMEDIUM',
+    fontFamily: 'Nunito',
     fontSize: 14,
     fontWeight: '400',
     lineHeight: 21,
   },
   link: {
     color: '#0080FF',
-    fontFamily:  'SFPRODISPLAYMEDIUM',
+    fontFamily: 'Nunito',
     fontSize: 14,
     fontWeight: '400',
     lineHeight: 21,
   },
   author: {
     color: 'rgba(46, 5, 5, 1)',
-    fontFamily:  'SFPRODISPLAYMEDIUM',
+    fontFamily: 'Nunito',
     fontSize: 12,
     fontWeight: '700',
-    lineHeight: 20
-  }
-})
+    lineHeight: 20,
+  },
+});
 
 export default styles;
