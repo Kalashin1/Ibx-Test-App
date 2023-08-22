@@ -13,9 +13,9 @@ const Header: React.FC<HeaderProps> = ({coverImage, navigation}) => {
   const [image, updateCoverImage] = React.useState('');
   React.useEffect(() => {
     updateCoverImage(coverImage);
+    console.log('image');
   }, [coverImage]);
 
-  console.log(coverImage);
   return (
     <View style={styles.headerContainer}>
       <View>
@@ -25,7 +25,12 @@ const Header: React.FC<HeaderProps> = ({coverImage, navigation}) => {
           </View>
         </TouchableOpacity>
         <View style={styles.imageContainer}>
-          {image && <Image style={styles.image} source={{uri: image}} />}
+          {image && (
+            <Image
+              style={styles.image}
+              source={require('../../../../assets/images/Frame 32 (1).png')}
+            />
+          )}
         </View>
       </View>
     </View>
